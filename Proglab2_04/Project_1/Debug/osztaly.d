@@ -1,0 +1,1 @@
+osztaly.o: ../osztaly.cpp
