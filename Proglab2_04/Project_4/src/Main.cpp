@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "RNum.h"
 
 class Sample {
 	int x;
@@ -22,21 +23,45 @@ public:
 		x = assign.x;
 		a = assign.a + 1;
 		c = assign.c;
-		printf("Addigment: x:%d a:%d c:%d\n",x,a,c);
+		printf("Assigment: x:%d a:%d c:%d\n",x,a,c);
 		return *this;
 	}
+
+	int operator == (const Sample &compare){
+		return this->x == compare.x ? 1 : 0;
+	}
+
+	friend Sample foo(const Sample & value);
 
 	~Sample(){
 		printf("Destructor: x:%d a:%d c:%d\n",x,a,c);
 	}
 };
 
+Sample foo(const Sample & value){
+	Sample temp = -value.x;
+	return temp;
+}
+
 int main() {
-	Sample a;
+	/*Sample a;
 	Sample b(1);
 	Sample b1 = 2;
 	Sample b2 = { 3 };
 	Sample c(b);
+	printf("before foo\n");
+	a = foo(a);
+	printf("after foo\n");
+	*/
+	RNum a;
+	RNum b(6,9);
+	RNum c(10,15);
+	a.print();
+	b.print();
+	c.print();
+	RNum q;
+	q = operator+(b,c);
+	q.print();
 	return 0;
 }
 

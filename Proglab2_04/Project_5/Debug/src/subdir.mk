@@ -4,16 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/Main.cpp \
-../src/RNum.cpp 
+../src/BorderedRectangle.cpp \
+../src/Date.cpp \
+../src/DateTime.cpp \
+../src/Project_5.cpp \
+../src/Rectangle.cpp \
+../src/Time.cpp 
 
 OBJS += \
-./src/Main.o \
-./src/RNum.o 
+./src/BorderedRectangle.o \
+./src/Date.o \
+./src/DateTime.o \
+./src/Project_5.o \
+./src/Rectangle.o \
+./src/Time.o 
 
 CPP_DEPS += \
-./src/Main.d \
-./src/RNum.d 
+./src/BorderedRectangle.d \
+./src/Date.d \
+./src/DateTime.d \
+./src/Project_5.d \
+./src/Rectangle.d \
+./src/Time.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
