@@ -7,7 +7,6 @@ public:
     Location();
     Location(double lat, double lon);
     int operator == (const Location &arg) const;
-    //friend Location operator+(const Location &arg1, const Location &arg2);
 };
 
 Location::Location() : Lat(this->lat), Lon(this->lon){
