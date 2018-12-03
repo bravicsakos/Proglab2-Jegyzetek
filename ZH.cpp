@@ -9,19 +9,12 @@ public:
     int operator == (const Location &arg) const;
 };
 
-Location::Location() : Lat(this->lat), Lon(this->lon){
-    Location::lat = 0;
-    Location::lon = 0;
-}
+Location::Location() : lat(0), lon(0), Lat(lat), Lon(lon){}
 
-Location::Location(double lat, double lon) : Lat(this->lat), Lon(this->lon){
-    Location::lat = lat;
-    Location::lon = lon;
-}
-
+Location::Location(double lat, double lon) : lat(lat), lon(lon), Lat(this->lat), Lon(this->lon){}
 
 int Location::operator == (const Location &arg) const{
-    return (Lon == arg.Lon && Lat == arg.Lat) ? 1 : 0;
+    return (this->Lon == arg.Lon && this->Lat == arg.Lat) ? 1 : 0;
 }
 
 Location operator + (const Location &arg1, const Location &arg2) {
